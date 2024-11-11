@@ -1,0 +1,125 @@
+/* page.module.css */
+
+/* Root container */
+.rootContainer {
+    min-height: 100vh;
+    padding-top: 6rem;
+    padding-bottom: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  @media (min-width: 640px) {
+    .rootContainer {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .rootContainer {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+  
+  /* Heading */
+  .heading {
+    font-size: 1.875rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  /* Grid container */
+  .gridContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  @media (min-width: 640px) {
+    .gridContainer {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .gridContainer {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  /* Product card */
+  .productCard {
+    background-color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+  }
+  
+  /* Hover and tap scale effect */
+  .productCard:hover {
+    transform: scale(1.05);
+  }
+  
+  .productCard:active {
+    transform: scale(0.95);
+  }
+  
+  /* Image container */
+  .imageContainer {
+    position: relative;
+    height: 16rem;
+  }
+  
+  .imageButton {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.75);
+    border-radius: 50%;
+    transition: color 0.2s;
+  }
+  
+  .imageButton:hover .icon {
+    color: var(--primary-color);
+  }
+  
+  /* Icon */
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--secondary-color);
+  }
+  
+  /* Product details */
+  .productDetails {
+    padding: 1rem;
+  }
+  
+  .productName {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  
+  .productPrice {
+    color: var(--accent-color);
+    font-weight: bold;
+  }
+  
+  /* Animations */
+  .fadeIn {
+    opacity: 0;
+    animation: fadeInAnimation 0.5s forwards;
+  }
+  
+  @keyframes fadeInAnimation {
+    to {
+      opacity: 1;
+    }
+  }
+  
